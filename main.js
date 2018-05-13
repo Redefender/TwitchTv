@@ -1,11 +1,15 @@
 $(document).ready(function(){
-  let status = document.querySelector(".status");
+  let users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp",
+   "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"]
 
-  if(status.innerHTML === "offline"){
-    status.styles.color = "red";
-  } else{
-    status.styles.color = "green";
+  let url= 'https://wind-bow.gomix.me/twitch-api';
+
+  for( let i =0; i < users.length;i++){
+    console.log(users[i]);
   }
+  // $.get( )
+
+
 
 
 
