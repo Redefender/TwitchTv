@@ -22,11 +22,22 @@ body{
   letter-spacing: 2px;
   font-weight: 900;
   color:white;
+  display: inline-block;
 
 
 
 }
 
+.header ul{
+  display:inline-block;
+  margin:0;
+  margin-right:10px;
+  list-style: none;
+}
+
+.header ul li{
+  display: inline;
+}
 .body{
   width:100%
 
@@ -51,7 +62,7 @@ body{
   text-align:center;
   color:yellow;
   margin:0 auto;
-  margin-left: 20vw;
+  margin-left: 30vw;
 }
 .body .section .user:hover{
   text-decoration: underline;
@@ -73,7 +84,7 @@ body{
     text-align:center;
     margin:0 auto;
     float:none;
-    margin-left:20vw;
+    margin-left:18vw;
     /*margin-left: 75vw;*/
   }
   .body .section .status{
@@ -84,6 +95,10 @@ body{
     margin-left:20vw;
 
 
+  }
+  .header ul li{
+    display: list-item;
+    margin:0;
   }
   body{
 

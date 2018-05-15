@@ -8,7 +8,7 @@ $(document).ready(function(){
   //I want to be able to loop through all of these...
   for(let i=0;i<users.length;i++){
     $.get(url + users[i],function(data){
-      console.log(data["logo"]);
+
 
       //assign local
       let logo = data["logo"];
@@ -18,25 +18,29 @@ $(document).ready(function(){
       $.get(urlStream + users[i],function(data){
         let status = data["stream"];
 
-        console.log("api status",status);
+
 
         //create doc elements
         let section = document.createElement("section");
         let img = document.createElement("img");
         let user = document.createElement("p");
-        console.log(user);
+
         let onlineStatus = document.createElement("p");
 
         //give attributes
         section.className = "section";
+        section.id = 'section' + i;
         img.src = logo;
         user.className = "user";
         user.innerHTML = name;
         onlineStatus.className = "status";
-        console.log('onlineStatus:',onlineStatus);
-        onlineStatus.innerHTML = status === null?"offline":"online";
-        if(onlineStatus.innerHTML==="online") onlineStatus.style.color = "green";
 
+        onlineStatus.innerHTML = status === null?"offline":"online";
+        if(onlineStatus.innerHTML==="online"){ onlineStatus.style.color = "green"; section.classList.add("online")} else{
+          section.classList.add("offline");
+         }
+
+        console.log(onlineStatus.classList);
         //append
         section.append(img);
         section.append(user)
@@ -55,8 +59,38 @@ $(document).ready(function(){
   }
 
 
+  let filterOnline = ()=>{
+    $(".offline").hide();
+    $(".online").show();
+
+  };
+
+  let filterOffline = ()=>{
+    $(".online").hide();
+    $(".offline").show();
 
 
+  };
 
+  let showAll = ()=>{
+    $(".online").show();
+    $(".offline").show();
+
+
+  };
+
+
+  $("input[name='offline']").click(function(){
+    filterOffline();
+  });
+
+
+  $("input[name='online']").click(function(){
+    filterOnline();
+  });
+
+    $("input[name='all']").click(function(){
+      showAll();
+    });
 
 });
