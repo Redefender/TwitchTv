@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
   let users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp",
-   "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas","ninja"];
+   "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas","ninja","anarchyxninja1"];
 
   let url = 'https://wind-bow.glitch.me/twitch-api/users/';
   let urlStream = 'https://wind-bow.glitch.me/twitch-api/streams/'
