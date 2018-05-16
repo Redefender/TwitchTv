@@ -38,6 +38,24 @@ body{
 .header ul li{
   display: inline;
 }
+
+.header ul li input{
+  border-radius: 2px;
+  border:beige;
+  font-family:fantasy;
+
+}
+
+.header ul li input:focus{
+  outline-width: 3px;
+  outline-style: solid;
+}
+.header ul li input[name="offline"]{
+  color: red;
+}
+.header ul li input[name="online"]{
+  color:green;
+}
 .body{
   width:100%
 
