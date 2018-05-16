@@ -23,38 +23,45 @@ body{
   font-weight: 900;
   color:white;
   display: inline-block;
-
+  margin-left:5px;
 
 
 }
 
 .header ul{
-  display:inline-block;
+  display:block;
   margin:0;
   margin-right:10px;
   list-style: none;
 }
 
 .header ul li{
-  display: inline;
+  display: inline-block;
+  margin-right:10px;
+
 }
 
 .header ul li input{
+
   border-radius: 2px;
   border:beige;
   font-family:fantasy;
+  width:60px;
+  height:20px;
 
 }
 
-.header ul li input:focus{
-  outline-width: 3px;
-  outline-style: solid;
-}
+
 .header ul li input[name="offline"]{
   color: red;
 }
 .header ul li input[name="online"]{
   color:green;
+}
+.header ul li input[name="all"]{
+  outline-width: 3px;
+  outline-style: solid;
+  outline-color: blue;
 }
 .body{
   width:100%
@@ -96,7 +103,7 @@ body{
 
 }
 
-@media only screen and (max-width: 750px)  {
+@media only screen and (max-width: 1000px)  {
   .body .section .user{
     display:block;
     text-align:center;
